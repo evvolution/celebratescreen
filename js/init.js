@@ -14,21 +14,24 @@ window.onload = function() {
 }
 
 
-function checkisHavePhone(){
-    $.ajax({
-        type:"get",
-        url: link + 'wxusers/?openid=' + openid,
-        dataType:"json",
-        async:false,
-        success:function(datax){
+// function checkisHavePhone(){
+//     $.ajax({
+//         type:"get",
+//         url: link + 'wxusers/?openid=' + openid,
+//         dataType:"json",
+//         async:false,
+//         success:function(datax){
             
-        },
-        error: function(){
-            console.log('checkisHavePhone*****xxx');
-            alert("系统繁忙，请重试");
-        }
-    })
-}
+//         },
+//         error: function(){
+//             console.log('checkisHavePhone*****xxx');
+//             alert("系统繁忙，请重试");
+//         }
+//     })
+// }
+
+
+
 
 function getParam(paramName) {
     paramValue = "", isFound = !1;
