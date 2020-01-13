@@ -6,13 +6,57 @@
  */
 
 $(document).ready(function(){ 
-
+    getlist()
 })
 
 window.onload = function() {
-
+    getlistperquatermin();
 }
 
+var link = 'http://server.foshanplus.com/';
+
+var greetings = new Swiper('#greetings', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    autoplay: 5000,
+});
+
+function getlistperquatermin(){
+    setInterval(function() {
+        getlist()
+    }, 15000);
+}
+
+function getlist(){
+    $.ajax({
+        type:"get",
+        url: link + 'message/?size=9',
+        dataType:"json",
+        async:false,
+        success:function(datax){
+            // console.log(datax)
+            for(var i=0; i<3; i++){
+                var mline = '';
+                for(var j=(i*3); j<3*(i + 1); j++){
+                    var line1 = "";
+                    var line2 = "";
+                    var line3 = "";
+                    var mlinetmp = '';
+                    line1 = '<div class="item"><div class="plugin right-top-pic"><img src="img/fw.png"/></div><div class="fspic"><img src="' + datax.results[j].pics + '"/></div>';
+                    line2 = '<div class="fsinfo"><strong><p class="fsusername">' + datax.results[j].user_name + '</p></strong>';
+                    line3 = '<p class="fsusergreeting">' + datax.results[j].content + '</p></div></div>';
+                    mlinetmp =  line1 + line2 + line3;
+                    mline += mlinetmp;
+                }
+                $("#greetpage" + i).html(mline);
+            }
+        },
+        error: function(){
+            console.log('getlist*****xxx');
+            alert("系统繁忙，请重试");
+        }
+    })
+}
 
 // function checkisHavePhone(){
 //     $.ajax({

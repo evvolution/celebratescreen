@@ -6,7 +6,6 @@
 
 body{
     height: 100%;
-	/* line-height: 0.8rem; */
 }
 
 .container-fluid{
@@ -23,6 +22,80 @@ body{
     background-size: cover;
     background-position: center 0;
     text-align: center;
+}
+
+.swiper-container{
+    width: 33% ! important;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    
+    height: 30%;
+    padding-top: 10px;
+    bottom: 15%;
+}
+
+.item{
+    position: relative;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%,50%);
+    width: 90%;
+    border: 2px solid #e4ae45;
+    border-radius: 0.5rem;
+    height: 3.5rem;
+    margin: 0.5rem 0;
+}
+
+.plugin{
+    position: absolute;
+}
+
+.plugin img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.right-top-pic{
+    right: -0.5rem;
+    top: -0.5rem;
+}
+
+.fspic{
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    left: .5rem;
+    top: .5rem;
+}
+
+.fspic img{
+    width: 100%;
+    border-radius: 3rem;
+}
+
+.fsinfo{
+    display: inline-block;
+    position: relative;
+    left: .5rem;
+    width: 70%;
+}
+
+.fsusername{
+    /* position: absolute;
+    left: -1rem;
+    top: 1rem; */
+    text-align: left;
+    color: #b36623;
+    font-size: 1.3rem;
+}
+
+.fsusergreeting{
+    /* position: relative;
+    left: 1rem;
+    top: 1rem; */
+    text-align: left;
 }
 
 
