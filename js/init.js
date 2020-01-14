@@ -24,18 +24,18 @@ var greetings = new Swiper('#greetings', {
 function getlistperquatermin(){
     setInterval(function() {
         getlist()
-    }, 15000);
+    }, 25000);
 }
 
 function getlist(){
     $.ajax({
         type:"get",
-        url: link + 'message/?size=9',
+        url: link + 'message/?size=15',
         dataType:"json",
         async:false,
         success:function(datax){
             // console.log(datax)
-            for(var i=0; i<3; i++){
+            for(var i=0; i<5; i++){
                 var mline = '';
                 for(var j=(i*3); j<3*(i + 1); j++){
                     var line1 = "";
