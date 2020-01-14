@@ -16,7 +16,7 @@ window.onload = function() {
 var link = 'http://server.foshanplus.com/';
 
 var greetings = new Swiper('#greetings', {
-    pagination: '.swiper-pagination',
+    // pagination: '.swiper-pagination',
     paginationClickable: true,
     autoplay: 5000,
 });
